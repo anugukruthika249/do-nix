@@ -1,0 +1,7 @@
+{
+  "name": "Donix - Blood Donation Platform",
+  "description": "A life-saving platform connecting patients with verified blood donors in real-time through automated notifications, verified onboarding, and incentive-based engagement.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
