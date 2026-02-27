@@ -8,9 +8,19 @@ import { Testimonials } from './components/Testimonials';
 import { Dashboard } from './components/Dashboard';
 import { DonorRegistration } from './components/DonorRegistration';
 import { ProblemSolution } from './components/ProblemSolution';
+import { updatePincodes } from "./updatePincode";
+
+//import { useEffect } from "react";
+//import { uploadDonors } from "./uploadData";
+
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'home' | 'app' | 'donor-registration'>('home');
+
+  // useEffect(() => {
+//   updatePincodes();
+// }, []);
+  
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50">
@@ -18,44 +28,20 @@ const App: React.FC = () => {
       
       <main className="flex-grow">
         {activeTab === 'home' && (
-          <div className="space-y-0">
-            <Hero 
-              onGetStarted={() => setActiveTab('app')} 
-              onJoinDonor={() => setActiveTab('donor-registration')} 
-            />
-            <ProblemSolution />
-            <Features />
-            <TrustSafety />
-            <Testimonials />
+  <div className="space-y-0">
+    <Hero 
+      onGetStarted={() => setActiveTab('app')} 
+      onJoinDonor={() => setActiveTab('donor-registration')} 
+    />
+    <ProblemSolution />
+    <Features />
+    <TrustSafety />
+    <Testimonials />
+  </div>
+)}
             
-            {/* CTA Section */}
-            <section className="py-20 bg-red-600 relative overflow-hidden">
-              <div className="absolute inset-0 opacity-10">
-                <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                  <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white" />
-                </svg>
-              </div>
-              <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-                <h2 className="text-4xl font-bold text-white mb-6">Ready to make a difference?</h2>
-                <p className="text-red-100 text-xl mb-10">Join thousands of heroes in India who are saving lives every day through Donix.</p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button 
-                    onClick={() => setActiveTab('donor-registration')}
-                    className="px-10 py-4 bg-white text-red-600 font-bold rounded-2xl shadow-xl hover:bg-red-50 transition-all transform hover:scale-105"
-                  >
-                    Register as a Donor
-                  </button>
-                  <button 
-                    onClick={() => setActiveTab('app')}
-                    className="px-10 py-4 bg-red-800 text-white font-bold rounded-2xl shadow-xl hover:bg-red-900 transition-all border border-red-500/30"
-                  >
-                    Post Emergency Request
-                  </button>
-                </div>
-              </div>
-            </section>
-          </div>
-        )}
+           
+        
         {activeTab === 'app' && <Dashboard />}
         {activeTab === 'donor-registration' && (
           <DonorRegistration onBack={() => setActiveTab('home')} />

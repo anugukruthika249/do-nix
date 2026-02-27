@@ -1,0 +1,94 @@
+ [
+ {
+    "name": "Rahul Reddy",
+    "age": 28,
+    "bloodGroup": "O+",
+    "phone": "9845123764",
+    "area": "Kompally"
+  },
+  {
+    "name": "Sneha Sharma",
+    "age": 24,
+    "bloodGroup": "A+",
+    "phone": "9398472615",
+    "area": "Suchitra"
+  },
+  {
+    "name": "Karthik Rao",
+    "age": 31,
+    "bloodGroup": "B+",
+    "phone": "9012347856",
+    "area": "Alwal"
+  },
+  {
+    "name": "Pooja Verma",
+    "age": 26,
+    "bloodGroup": "AB+",
+    "phone": "8796452310",
+    "area": "Bowenpally"
+  },
+  {
+    "name": "Vikram Patel",
+    "age": 35,
+    "bloodGroup": "O-",
+    "phone": "9987612345",
+    "area": "Quthbullapur"
+  },
+  {
+    "name": "Divya Nair",
+     "age": 23,
+    "bloodGroup": "A-",
+    "phone": "9123456789",
+    "area": "Petbasheerabad"
+  },
+  {
+    "name": "Arjun Kumar",
+    "age": 29,
+    "bloodGroup": "B-",
+    "phone": "9701234568",
+    "area": "Bolarum"
+  },
+  {
+    "name": "Meghana Reddy",
+    "age": 32,
+    "bloodGroup": "O+",
+    "phone": "8899765432",
+    "area": "Kandlakoya"
+  },
+  {
+    "name": "Suresh Yadav",
+ "age": 23,
+    "bloodGroup": "A-",
+    "phone": "9123456789",
+    "area": "Petbasheerabad"
+  },
+  {
+    "name": "Arjun Kumar",
+    "age": 29,
+    "bloodGroup": "B-",
+    "phone": "9701234568",
+    "area": "Bolarum"
+  },
+  {
+    "name": "Meghana Reddy",
+    "age": 32,
+    "bloodGroup": "O+",
+    "phone": "8899765432",
+    "area": "Kandlakoya"
+  },
+  {
+    "name": "Suresh Yadav",
+      "age": 40,
+    "bloodGroup": "A+",
+    "phone": "9345612780",
+    "area": "Medchal"
+  },
+  {
+    "name": "Anjali Gupta",
+    "age": 27,
+    "bloodGroup": "AB-",
+    "phone": "9812376450",
+    "area": "Gundlapochampally"
+  }
+]
+

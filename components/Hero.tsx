@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useMemo } from 'react';
 
 interface HeroProps {
   onGetStarted: () => void;
@@ -7,6 +6,8 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ onGetStarted, onJoinDonor }) => {
+  const activeRequestCount = useMemo(() => Math.floor(Math.random() * 25) + 5, []);
+
   return (
     <section className="relative overflow-hidden bg-white pt-24 pb-20">
       {/* Background Orbs */}
@@ -23,7 +24,8 @@ export const Hero: React.FC<HeroProps> = ({ onGetStarted, onJoinDonor }) => {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
             </span>
             <span className="text-[10px] font-black tracking-[0.2em] text-white uppercase">
-              12 Active Requests in Bengaluru
+              {activeRequestCount} Active Requests in Hyderabad
+
             </span>
           </div>
 

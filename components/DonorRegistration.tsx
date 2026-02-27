@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { BloodGroup } from '../types';
 
@@ -12,7 +13,7 @@ export const DonorRegistration: React.FC<DonorRegistrationProps> = ({ onBack }) 
     name: '',
     age: '',
     phone: '',
-    email: '',
+    lastDonatedDate: '',
     bloodGroup: BloodGroup.OPos,
     medicalCondition: '',
     area: ''
@@ -110,15 +111,14 @@ export const DonorRegistration: React.FC<DonorRegistrationProps> = ({ onBack }) 
               </div>
             </div>
             <div>
-              <label className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
+              <label className="block text-sm font-semibold text-slate-700 mb-2">Last Donated Date</label>
               <input 
-                required
-                type="email"
-                placeholder="Enter email address"
+                type="date"
                 className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all bg-slate-50"
-                value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                value={formData.lastDonatedDate}
+                onChange={(e) => setFormData({...formData, lastDonatedDate: e.target.value})}
               />
+              <p className="text-xs text-slate-400 mt-1">Leave blank if this is your first time.</p>
             </div>
           </div>
 
@@ -144,6 +144,16 @@ export const DonorRegistration: React.FC<DonorRegistrationProps> = ({ onBack }) 
                 onChange={(e) => setFormData({...formData, area: e.target.value})}
               />
             </div>
+          </div>
+
+          <div>
+            <label className="block text-sm font-semibold text-slate-700 mb-2">Medical Conditions (if any)</label>
+            <textarea 
+              placeholder="e.g. Diabetes, Hypertension, or any recent surgeries"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all bg-slate-50 min-h-[100px]"
+              value={formData.medicalCondition}
+              onChange={(e) => setFormData({...formData, medicalCondition: e.target.value})}
+            />
           </div>
 
           <div className="pt-4">
